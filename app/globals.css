@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #f7f5f1;
+  --foreground: #292722;
+  --accent: #a78b70;
+  --card: #ffffff;
+  --border: #e9e4dc;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, Arial, sans-serif;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.studio {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 20px 60px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.header p {
+  color: #77716a;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 25px rgba(50, 40, 20, 0.04);
+}
+
+.panel h2 {
+  font-size: 19px;
+  margin-bottom: 16px;
+}
+
+.upload-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.upload-box {
+  display: block;
+  border: 1.5px dashed #cfc4b7;
+  border-radius: 15px;
+  padding: 22px 12px;
+  text-align: center;
+  background: #fbfaf8;
+  color: #514b44;
+}
+
+.upload-box input {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.upload-box strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.preview {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+
+.field {
+  margin-bottom: 17px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.field select,
+.field textarea,
+.field input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: #fff;
+  color: #292722;
+}
+
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.generate-button {
+  width: 100%;
+  padding: 17px;
+  border: 0;
+  border-radius: 13px;
+  background: #8c7157;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.generate-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.result {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 18px;
+}
+
+.status {
+  margin-top: 15px;
+  color: #76634f;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .studio {
+    padding: 22px 14px 40px;
+  }
+
+  .panel {
+    padding: 17px;
+  }
+
+  .upload-grid {
+    grid-template-columns: 1fr;
+  }
+}
